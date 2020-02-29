@@ -1,0 +1,446 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PortfoliSite">
+    <meta name="author" content="Safiullah Khan">
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'portfolio/js/jquery-3.4.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'portfolio/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'portfolio/js/myjQuery.js' %}"></script>
+    <link rel="shortcut icon" type="image/png" href="{% static 'portfolio/images/logo-red.png' %}">
+    <style>
+    	body {
+            width: 100%;
+            height: 100%;
+    	}
+        .totop {
+            top: 600px;
+            left: 1200px;
+            text-align: center;
+            position: fixed;
+        }
+        .home {
+            height: 700px;
+            background-image: url("{% static 'portfolio/images/laptop-background1.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+    	@media screen and (max-width: 760px) {
+    		.home {
+	    		background-image: url("{% static 'portfolio/images/laptop-background.jpg' %}");
+	            background-repeat: no-repeat;
+	            background-size: cover;
+	            width: 100%;
+	            height: 100%;
+    		}
+    		header ul li a {
+    			float: none;
+    			text-align: center;
+    		}
+    		.mid-section {
+    			padding-top: 30px;
+    			padding-bottom: 40px;
+    		}
+
+    	}
+
+    	/*About Us*/
+
+        .aboutcompany {
+            /*background-color: pink;*/
+            padding: 60px 0px;
+        }
+
+        .aboutUsh2, .teamh2, .servicesh2 {
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+        .about-body {
+            margin-top: 40px;
+        }
+        .team-body {
+            margin-top: 40px; 
+        }
+        .col-lg-2 img {
+            width: 50%;
+        }
+        .col-lg-4 img {
+            width: 100%;
+        }
+        .card-css {
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            color: black !important;
+            margin-top: 10px;
+        }
+        .margin-12 {
+            margin: 12px 0px;
+        }
+        .opacity-5 {
+            opacity: 0.5;
+        }
+        .about-features {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+        @media screen and (max-width: 760px) {
+            .card-css {
+                width: 90%;
+                justify-content: center;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            .card-css img {
+                height: 300px;
+            }
+            .team-body {
+                margin: 10px 0px 10px 10px !important;
+            }
+        }
+
+        /*Services*/
+
+        .comp-services {
+            color: white;
+            background-image: url("{% static 'portfolio/images/background2.jpeg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: grey;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .divdesign {
+            border-top: 1px solid grey;
+            padding-top: 30px;
+            margin-bottom: 40px;
+            height: 200px;
+            width: 200px;
+        }
+        .servicesh2 {
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+        .services-body {
+            margin-top: 40px; 
+        }
+        #webslide, #gdslide, #webappslide, #dbmsslide, #andappslide, #consoleslide, #docslide {
+            display: none;
+        }
+        /*.servicesdiv {
+            border: 1px solid black;
+        }*/
+        .servicesdiv img:hover {
+            opacity: 0.6;
+        }
+        @media (max-width: 760px) {
+            #webslide, #gdslide, #webappslide, #dbmsslide, #andappslide, #consoleslide, #docslide {
+                display: flex;
+            }
+            .services-body {
+                text-align: none;
+                margin: 10px 10px 10px 0px !important;
+            }
+            .services {
+                padding-top: 10px !important;
+            }
+        }
+
+        /*Contact Us*/
+
+        .contactus {
+            background-color: white;
+            color: black;
+        }
+
+        /*Footer*/
+
+        .footer-class {
+            cursor: default;
+        }
+    </style>
+	<title>TechVelopers | Home</title>
+</head>
+<body>
+    <div class="home">
+        <header>
+            <div class="row">
+                <div class="col-xl-2 col-md-12">
+                    <div class="text-center">
+                        <img src="{% static 'portfolio/images/logo-red.png' %}" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-6 displaynone"></div>
+                <div class="col-xl-4 col-md-12">
+                    <div class="menu-bar">
+                        <div class="text-center">
+                            <ul class="text-uppercase">
+                                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                                <li><a href="#AboutUs" class="current"><i class="fa fa-info"></i> About Us</a></li>
+                                <li><a href="#Services"><i class="fa fa-user-cog"></i> Services</a></li>
+                                <!-- <li><a href="Portfolio.html"><i class="fa fa-folder"></i> Portfolio</a></li> -->
+                                <li><a href="#tv-contact"><i class="fa fa-phone"></i> Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 mid-section">
+                    <section class="">
+                        <h2 class="text" style="font-size: 50px">Astonishing Websites & Creative Designs</h2>
+                        <p class="text" style="font-weight: normal;">We Build High Quality Responive Websites And Well Worked Graphic Designs</p>
+                    </section>
+                    <div class="text-center">
+                        <input type="button" class="btn btn-primary" value="Learn More" onclick="window.location.href = '#AboutUs';">
+                        <input type="button" class="btn btn-primary" value="Ask Something ?" onclick="window.location.href = '#tv-contact';">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--     <div>
+        <div>
+            <button class="btn btn-primary totop">To Top</button>
+        </div>
+    </div> -->
+
+    <!-- About Us Tab -->
+
+    <div><a name="AboutUs"></a></div>
+    <div class="aboutcompany">
+        <div class="container-fluid">
+                
+                <h2 class="text-center aboutUsh2 text-uppercase">About Us</h2>
+                <h4 class="text-center featuresh" style="margin: 30px 0px">Key Features of our company</h4>
+                <div class="row" style="margin-top: 60px; margin-bottom: 70px;">
+                    <div class="col-lg-3 col-md-12">
+                        <div class="card card-css">
+                            <div class="text-center p-3">
+                                <i class="fa fa-heart fa-3x"></i>
+                            </div>
+                            <div class="text-center">
+                                <h5>Passion</h5>
+                                <p class="about-features">We are a team of professionals working on improving our skills with every passing day. Our objective is to learn and provide the best of solutions to our clients</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12">
+                        <div class="card card-css">
+                            <div class="text-center p-3">
+                                <i class="fa fa-desktop fa-3x"></i>
+                            </div>
+                            <div class="text-center">
+                                <h5>Responsive</h5>
+                                <p class="about-features">We are aware of the screen sizes of the devices being used these days. And that is why we always add responsiveness to our projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12">
+                        <div class="card card-css">
+                            <div class="text-center p-3">
+                                <i class="fa fa-diamond fa-3x"></i>
+                            </div>
+                            <div class="text-center">
+                                <h5>Quality</h5>
+                                <p class="about-features">The most important thing that we never compromise on is the Quality of our products. We strive to provide best quality to our clients.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12">
+                        <div class="card card-css">
+                            <div class="text-center p-3">
+                                <i class="fa fa-heart fa-3x"></i>
+                            </div>
+                            <div class="text-center">
+                                <h5>Support</h5>
+                                <p class="about-features">Our clients are our assets. That being said we help our clients in everything be it is design selection or installation of the required components.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Services Tab -->
+
+    <div><a name="Services"></a></div>
+    <div class="comp-services">
+        <div class="container-fluid">
+                
+            
+                <h2 class="text-center servicesh2 text-uppercase">Our Services</h2>
+                <p class="services-body text-center" style="margin: 20px 150px">We provide following services in TechVelopers. These services are aimed to make your business well managed and more profitable by engaging it with the online community.</p>
+                <div class="row col-12 services text-center" style="padding-top: 50px">
+                    <div class="col-md-4 col-sm-6 servicesdiv text-center">
+                        <div>
+                            <h2 class="servicesh2">Website Development</h2>
+                            <img id="website" class="divdesign" src="{% static 'portfolio/images/webdevelopment.png' %}" alt="Website Development">
+                            <p id="webslide">We at Techvelopers have a team of professionals that is aimed towards making websites be it an online business card or a large e-commerce site.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 servicesdiv text-center">
+                        <div>
+                            <h2 class="servicesh2">Graphic Designing</h2>
+                            <img id="gd" class="divdesign" src="{% static 'portfolio/images/graphicdesigning.png' %}" alt="Graphic Designing">
+                            <p id="gdslide">A good design can enhance the value of a product by many folds. That is why our Graphic Design department is keen to make Dandy and Attractive designs. We provide services like logo making, business card designing, restaurent menus and other things and many many more.</p>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-4 col-sm-6 servicesdiv text-center">
+                        <div>
+                            <h2 class="services">Web Application</h2>
+                            <img id="webapp" class="divdesign" src="portfolio/images/webapplication.jpg" alt="Web Application">
+                            <p id="webappslide">We provide high quality interactive Web Applications at very low rates and good UI and UX.</p>
+                        </div>
+                    </div> -->
+                    <div class="col-md-4 col-sm-6 servicesdiv text-center">
+                        <div>
+                            <h2 class="servicesh2">DBMS System</h2>
+                            <img id="dbms" class="divdesign" src="{% static 'portfolio/images/dbms.png' %}" alt="Database Management Systerm">
+                            <p id="dbmsslide">If you are having a business and you have to deal with a lot of data to handle. Don't worry we got your back. Our database desingers and developers are ready to help you by making your uphill task a piece of pie.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 servicesdiv text-center">
+                        <div>
+                            <h2 class="servicesh2">Web Application</h2>
+                            <img id="andapp" class="divdesign" src="{% static 'portfolio/images/androidapp.jpg' %}" alt="Android Application Development">
+                            <p id="andappslide">With the world becoming a global villiage we need to provide online services through web applications. And the good news is our team is passionate about playing is role in this regard.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 servicesdiv text-center">
+                        <div>
+                            <h2 class="servicesh2">Console Application</h2>
+                            <img id="console" class="divdesign" src="{% static '/portfolio/images/consoleapplication.jpg' %}" alt="Console Application">
+                            <p id="consoleslide">Console applications are user friendly and light weight applications that run on any pc without any internet connection. They provide high and efficient functionality with less designed front-end.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 servicesdiv text-center">
+                        <div>
+                            <h2 class="servicesh2">Documentation</h2>
+                            <img id="doc" class="divdesign" src="{% static 'portfolio/images/documentation.png' %}" alt="Database Management Systerm">
+                            <p id="docslide">In this busy world of today you might don't find time to convert your pdf or .jpg files to MS Word or Excel. But taadaa we got your back here too. Our team of experts is ready to provide you with these services too. Just tell us your requirments and get your work done within a few days.</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Contacts tab -->
+
+    <div><a name="tv-contact"></a></div>
+    <div class="contactus">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="text-center">
+                        <div class="form-head">
+                            <h4 class="text-uppercase">Get in touch.</h4>
+                            <p>Lets talk about your project.</p>
+                        </div>
+                        <div>
+                            <form method="POST" action="{% url 'home' %}">
+                                {% csrf_token %}
+                                <div class="card-contact">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group">
+                                                <label class="float-left">First Name</label>
+                                                <input type="text" name="fname" placeholder="Enter First Name" required class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group">
+                                                <label class="float-left">Last Name</label>
+                                                <input type="text" name="lname" placeholder="Enter Last Name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group">
+                                                <label class="float-left">Phone No.</label>
+                                                <input type="text" name="phone" placeholder="Enter Phone Number" required class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group">
+                                                <label class="float-left">Email</label>
+                                                <input type="email" name="email" placeholder="Enter Email" required class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-md-12">
+                                            <div class="form-group">
+                                                <label class="float-left">Message</label>
+                                                <textarea class="form-control" name="message" required placeholder="Type Message . . ."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-md-12">
+                                            <div class="float-right">
+                                                <button type="submit" name="submit" class="btn btn-success">Send <i class="fa fa-send"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="comp-work">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <h1>Graphic Designing</h1>
+                <embed src="Graphic Designing.pdf" width="600px" height="400px"></embed>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <h1>Web Development</h1>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Footer Tab -->
+
+    <footer class="footer-class">
+        <div class="footer-logo text-center">
+            <img src="{% static 'portfolio/images/logo-yellow.png' %}" alt="logo">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 footer-card">
+                    <div class="footer-email text-center">
+                        <h4 class="text-uppercase">Email</h4>
+                        <p>techvelopers89@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 footer-card">
+                    <div class="footer-phone text-center">
+                        <h4 class="text-uppercase">Phone</h4>
+                        <p>+92 349 8566178</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 footer-card">
+                    <div class="footer-social text-center">
+                        <h4 class="text-uppercase">Social</h4>
+                        <p><i class="fa fa-facebook"></i> <i class="fa fa-instagram"></i> <i class="fa fa-twitter"></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-footer text-center">
+                <p class="copyright">TechVelopers Inc. &copy; 2020</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

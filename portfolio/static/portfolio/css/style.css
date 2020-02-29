@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+body {
+	font-family: initial !important;
+}
+header ul li {
+	list-style-type: none;
+	display: inline;
+	text-shadow: currentColor;
+	text-decoration: none;
+	width: auto;
+	font-size: auto;
+	transition: 2s;
+}
+ul li a {
+	text-decoration: none;
+	/*display: block;*/
+	font-size: 12px;
+	padding-right: 5px !important;
+	padding-left: 5px !important;
+	color: white !important;
+}
+header ul li a:hover {
+	color: #d3dae6;
+	text-decoration: none;
+}
+header img {
+   	margin: 6px 0px 0px 10px;
+    width: 20%;
+}
+
+header img {
+    margin: 6px 0px 0px 10px;
+    width: 50% !important;
+}
+header .row {
+    padding-top: 0px;
+}
+.col-lg-4 img {
+   	width: 100%;
+}
+.top-bar {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.contact {
+    margin-top: 10px;
+}
+.menu-bar {
+    margin: 20px 30px 0px;
+}
+.card-contact {
+   	margin-top: 50px;
+}
+.contact-head, .form-head {
+   	margin-top: 60px;
+}
+.text {
+	font-family: initial;
+	text-align: center;
+	font-weight: bold;
+}
+#inside {
+	border: 2px solid black;
+	background-color: brown;
+	padding: 15px;
+	margin: 15px;
+}
+.mid-section {
+	padding-top: 160px;
+	/*padding-bottom: 120px;*/
+}
+.current {
+	font-weight: bold;
+}
+.logo {
+   	padding-top: 5px;
+}
+@media screen and (max-width: 384px) {
+	.aboutUsh2 {
+		font-size: 25px;
+	}
+}
+
+/*Footer CSS*/
+
+.copyright-footer {
+	height: 50px;
+	padding: 12px;
+}
+
+.footer-logo {
+	margin-bottom: 20px;
+	padding-top: 20px;
+}
+
+.footer-logo img {
+	width: 250px;
+}
+
+@media screen and (max-width: 760px) {
+	.footer-card {
+		color: white;
+		border: none !important;
+		background-color: transparent !important;
+	}
+	.copyright-footer {
+		border-top: 1px solid white;
+	}
+}
+
+footer {
+	background-image: url("../images/laptop-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	margin-top: 20px;
+	color: white;
+}
+
+.footer-card {
+	background-color: black;
+	border: 1.5px solid #262629;
+	color: white;
+	padding-top: 10px;
+}
