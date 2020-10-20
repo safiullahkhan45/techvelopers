@@ -26,8 +26,8 @@ SECRET_KEY = '*e_i3lg$i)goxi)14hcv@1ed$7d0^-ygqnz196m&^5x$suo6j2'
 DEBUG = True
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'earthbeauty45@gmail.com'
-EMAIL_HOST_PASSWORD = 'jAzz3698'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
